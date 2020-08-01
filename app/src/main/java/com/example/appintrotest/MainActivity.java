@@ -28,12 +28,16 @@ public class MainActivity extends AppIntro {
         CustomSlider customSlider = CustomSlider.newInstance(R.layout.first_slider_layout);
 
         CustomSlider customSlider2 = CustomSlider.newInstance(R.layout.second_slider_layout);
+        CustomSlider customSlider3 = CustomSlider.newInstance(R.layout.third_slider_layout);
+
+        customSlider.setBackgroundColor(Color.parseColor("#FFFFFF"));
 
         addSlide(customSlider);
         addSlide(customSlider2);
+        addSlide(customSlider3);
 
         setColorTransitionsEnabled(true);
-
+        setTransformer(AppIntroPageTransformerType.Fade.INSTANCE);
     }
 
     @Override
