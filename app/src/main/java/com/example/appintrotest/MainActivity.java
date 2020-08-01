@@ -25,19 +25,12 @@ public class MainActivity extends AppIntro {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        CustomSlider1 customSlider1 = new CustomSlider1();
-        CustomSlider2 customSlider2 = new CustomSlider2();
+        CustomSlider customSlider = CustomSlider.newInstance(R.layout.first_slider_layout);
 
-        customSlider1.setBackgroundColor(Color.parseColor("#FFFFFF"));
-        customSlider2.setBackgroundColor(Color.parseColor("#000000"));
+        CustomSlider customSlider2 = CustomSlider.newInstance(R.layout.second_slider_layout);
 
-
-        addSlide(new CustomSlider1());
-        addSlide(new CustomSlider2());
-        setImmersiveMode();
-
-        setIndicatorColor(Color.parseColor("#ffffff") , Color.parseColor("#ffffff"));
-
+        addSlide(customSlider);
+        addSlide(customSlider2);
 
         setColorTransitionsEnabled(true);
 
